@@ -21,7 +21,7 @@ return {
 The plugin exports a module with a `switch` function. After installation, this can be assigned to a keybind like this:
 ```lua
 vim.keymap.set("n", "<leader>vc", function()
-	require('view-component').switch()
+  require('view-component').switch()
 end)
 ```
 
