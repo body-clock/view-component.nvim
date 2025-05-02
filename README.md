@@ -7,10 +7,27 @@ Some other proposed functionality:
 
 PRs and contributions welcome!
 
+## Installation
+
+With `lazy.nvim`:
+```lua
+return {
+ "body-clock/view-component.nvim"
+}
+```
+
+## Usage
+
+The plugin exports a module with a `switch` function. After installation, this can be assigned to a keybind like this:
+```lua
+vim.keymap.set("n", "<leader>vc", function()
+	require('view-component').switch()
+end)
+```
+
 ## Development
 
 ### Run tests
-
 
 Running tests requires either
 
