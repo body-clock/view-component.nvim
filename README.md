@@ -1,47 +1,11 @@
-# nvim-lua-plugin-template
+# view-component.nvim
 
-This repository is a template for Neovim plugins written in Lua.
+A simple Neovim plugin for some ViewComponent utilities. I was frustrated at the lack of simple tooling that would allow me to quickly switch between a ViewComponent `.rb` and `.html.erb`. This is possible to achieve using the `rails.vim` plugin with a custom `projections.json` file, but I wanted something that would work beyond a per-project configuration file.
 
-The intention is that you use this template to create a new repository where you then adapt this readme and add your plugin code.
-The template includes the following:
+Some other proposed functionality:
+- [ ] create alternate file if it doesn't exist (with some boilerplate)
 
-- GitHub workflows and configurations to run linters and tests
-- Packaging of tagged releases and upload to [LuaRocks][luarocks]
-  if a [`LUAROCKS_API_KEY`][luarocks-api-key] is added
-  to the [GitHub Actions secrets][gh-actions-secrets]
-- Minimal test setup:
-  - A `scm` [rockspec][rockspec-format], `nvim-lua-plugin-scm-1.rockspec`
-  - A `.busted` file
-- EditorConfig
-- A .luacheckrc
-
-
-To get started writing a Lua plugin, I recommend reading `:help lua-guide` and
-`:help write-plugin`.
-
-## Scope
-
-Anything that the majority of plugin authors will want to have is in scope of
-this starter template. Anything that is controversial is out-of-scope.
-
-## Usage
-
-- Click [Use this template][use-this-template]. Do not fork.
-- Rename `nvim-lua-plugin-scm-1.rockspec` and change the `package` name
-  to the name of your plugin.
-
-## Template License
-
-The template itself is licensed under the [MIT license](https://en.wikipedia.org/wiki/MIT_License).
-The template doesn't include a LICENSE file. You should add one after creating your repository.
-
----
-
-
-The remainder of the README is text that can be preserved in your plugin:
-
----
-
+PRs and contributions welcome!
 
 ## Development
 
