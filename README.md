@@ -12,7 +12,7 @@ PRs and contributions welcome!
 With `lazy.nvim`:
 ```lua
 return {
- "body-clock/view-component.nvim"
+  "body-clock/view-component.nvim"
 }
 ```
 
