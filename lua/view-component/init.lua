@@ -59,10 +59,10 @@ local function rb_boilerplate(path)
 end
 
 local function open_file(path)
-  local original_modeline = vim.o.modeline
-  vim.o.modeline = false
+  local original_modeline = vim.opt.modeline:get()
+  vim.opt.modeline = false
   vim.cmd("edit " .. vim.fn.fnameescape(path))
-  vim.o.modeline = original_modeline
+  vim.opt.modeline = original_modeline
 end
 
 view_component.switch = function()
