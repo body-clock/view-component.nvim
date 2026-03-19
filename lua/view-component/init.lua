@@ -9,7 +9,9 @@ end
 -- e.g. app/components/ui/button_component.rb -> Ui::ButtonComponent
 local function class_name_from_path(path)
   local rel = path:match("app/components/(.+)%.rb$")
-  if not rel then return nil end
+  if not rel then
+    return nil
+  end
 
   local parts = {}
   for segment in rel:gmatch("[^/]+") do
@@ -21,7 +23,9 @@ end
 -- Generate boilerplate lines for a new .rb ViewComponent file
 local function rb_boilerplate(path)
   local class_name = class_name_from_path(path)
-  if not class_name then return {} end
+  if not class_name then
+    return {}
+  end
 
   local segments = {}
   for segment in class_name:gmatch("[^:]+") do
