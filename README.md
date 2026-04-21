@@ -52,6 +52,38 @@ module Ui
 end
 ```
 
+## Project Sidebar
+
+The sidebar lets you manage multiple Rails projects and quickly switch between them.
+
+Open it with `toggle` (or `open`):
+
+```lua
+vim.keymap.set("n", "<leader>vp", function()
+  require('view-component').sidebar.toggle()
+end)
+```
+
+### Adding a project
+
+With the sidebar open, press `a` to add the current working directory as a project. You can also call `add_project` directly:
+
+```lua
+require('view-component').sidebar.add_project()          -- adds cwd
+require('view-component').sidebar.add_project("/path/to/my-app")  -- adds explicit path
+```
+
+Projects are saved to `~/.local/share/nvim/view-component-projects.json` and persist across sessions.
+
+### Sidebar keybindings
+
+| Key    | Action                        |
+| ------ | ----------------------------- |
+| `a`    | Add current directory         |
+| `d`    | Remove project under cursor   |
+| `<CR>` | `cd` into project             |
+| `q`    | Close sidebar                 |
+
 ## Development
 
 ### Run tests

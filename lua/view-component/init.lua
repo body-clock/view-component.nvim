@@ -1,5 +1,14 @@
 local view_component = {}
 
+local sidebar = require("view-component.sidebar")
+
+view_component.sidebar = {
+  open = sidebar.open,
+  close = sidebar.close,
+  toggle = sidebar.toggle,
+  add_project = sidebar.add_project,
+}
+
 -- Convert snake_case to CamelCase
 local function to_camel_case(str)
   return (str:gsub("_(%a)", string.upper):gsub("^%a", string.upper))
